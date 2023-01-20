@@ -29,6 +29,10 @@ css: unocss
     Kevin Kunkel
     <br>
     Graph-Seminar 23.01.23
+    <br>
+    Prof. Dr. Stadler
+    <br>
+    Gatter
   </span>
 </div>
 
@@ -205,17 +209,35 @@ database "MySql" {
 </div>
 
 [Learn More](https://sli.dev/guide/syntax.html#diagrams)
+
 ---
 
-# Scanning Methodology
+# Scanning-Methodology
 
 <br>
 
-co
+- A combined system of compression, coding, and hiding proposed by Bourbakis in 1986 (SCAN-Language)
+- The word " SCAN " refers to the different methods of scanning
+a two-dimensional image. The SCAN language can produce a(mxm)!
+- SCAN can be stored in adjecancy matrices
+- Let $G$ be a graph with vertices set and edge set $E(G)={ϱ_1, ϱ_2, ϱ_3…, ϱ_m}$
+
+---
+
+# SCAN-Process
+
+<br>
+
+Scans             |  Partitions
+:-------------------------:|:-------------------------:
+![](/assets/grid.png)  |  ![](/assets/grid2.png) 
 
 
+<center> 
 
+**Figure 2:** shows how images are being scanned and partitioned.
 
+</center>
 
 ---
 
@@ -281,6 +303,20 @@ descrambling image of size (64×64 pixels).
 ---
 
 # Key-Generation (Using Graph Theory)
+
+- encryption and decryption use same key
+- verbal signal of length 10 ms is divided into blocks of size(256) values
+- blocks converted into square matrices (16x16) where matrix is defined as connected graph
+
+---
+
+# Example Encryption
+
+<br>
+
+Original             |  Encrypted
+:-------------------------:|:-------------------------:
+![](/assets/or.png)  |  ![](/assets/cr.png) 
 
 ---
 
