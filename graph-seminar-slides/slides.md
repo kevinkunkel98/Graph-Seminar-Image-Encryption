@@ -109,9 +109,14 @@ $$
 <img border="rounded" src="/assets/pic1.png">
 
 
-**Figure 1:** Examples of an Image subjected to Arnold’s Transform, (a) Original Image, (b) Image
+<center>
+
+**Figure 1:** Examples of an image subjected to Arnold’s Transform, (a) Original image, (b) Image
 obtained after 1st iteration, (c) Image obtained after 2nd iteration, (d) Image obtained after 384th
 iteration
+
+</center>
+
 
 ---
 layout: image-right
@@ -223,7 +228,11 @@ descrambling image of size (64×64 pixels).
 - encryption and decryption use same key
 - verbal signal of length 10 ms is divided into blocks of size(256) values
 - blocks converted into square matrices (16x16) where matrix is defined as connected graph
-- connected graph generates the keys by using the adjecency matrix
+- connected graph generates the keys by using the adjecency matrix (1 for existing interconnect 0 for none)
+- adjacency matrix multiplied by lower triangular $m$ to then again be converted to an adjacency matrix
+- using the Mod function to reduce resulting values to be identified between 0-255 (pixel values)
+- Mod funciton generates keys that extract values from matrix (to maintain a randomness)
+- create a key vector with 512 length
 
 ---
 
@@ -295,6 +304,16 @@ Original             |  Encrypted
 
 ---
 
+# Conclusion
+
+- exchange of image data through open channels is dangerous
+- reqirement of additional security
+- paper presents encryption algorithm for color images
+- depends on passing an audio signal in several stages and stores keys in a database
+- looking at data shows that the proposed algorithm offers strong security against brute force attacks
+
+---
+
 # Paper
 <br>
 <br>
@@ -302,5 +321,5 @@ Original             |  Encrypted
 <br>
 <br>
 
-Iman Qays Abduljaleel et al 2021, An Image of Encryption Algorithm Using Graph
+I. Q. Abduljaleel et al 2021, An Image of Encryption Algorithm Using Graph
 Theory and Speech Signal Key Generation, J. Phys.: Conf. Ser. 1804 012005
