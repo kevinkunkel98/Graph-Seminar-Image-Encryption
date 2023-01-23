@@ -28,11 +28,9 @@ css: unocss
   <span class="font-700">
     Kevin Kunkel
     <br>
-    Graph-Seminar 23.01.23
+    Graph-Seminar 23.01.2023
     <br>
     Prof. Dr. Stadler
-    <br>
-    Gatter
   </span>
 </div>
 
@@ -51,30 +49,15 @@ The last comment block of each slide will be treated as slide notes. It will be 
 
 <br>
 
-- **Introduction** - focus on the content with Markdown, and then style them later
-- **Proposal** - theme can be shared and used with npm packages
-- **Encryption** - code highlighting, live coding with autocompletion
-- **Decryption** - embedding Vue components to enhance your expressions
-- **Key-Generation** - built-in recording and camera view
-- **Parameter-Analysis** - export into PDF, PNGs, or even a hostable SPA
-- **Conclusion** - anything possible on a webpage
+- **Introduction**
+- **Proposal**
+- **Encryption**
+- **Decryption**
+- **Key-Generation**
+- **Computational Results**
 
 <br>
 <br>
-
----
-
-# Entropy Measures of Proposed Algorithm
-
-<br>
-<br>
-
-| **Color Image** | **Entropy Original Image** | **Entropy Encrypted Image** |
-| --- | ------- | -------- |
-| Baboon | 7.6128 | 7.9988 |
-| Lena | 7.7599 | 7.9987 |
-| Pepper | 7.7749 | 7.9987 |
-| Mona Liza | 7.3808 | 7.9981 |
 
 ---
 layout: image-right
@@ -88,21 +71,31 @@ image: https://images.unsplash.com/photo-1562770584-eaf50b017307?ixlib=rb-4.0.3&
 - Developement of network technology and multimedia
 - Increased transfer of images
 - Need of secure transfer of images
-- Many use cases for encryption (military, governments)
+- Many use cases for encryption (military, governments, crime, personal use)
 - Developement of models combining encryption and authorization methods
 
+---
 
-<style>
-.footnotes-sep {
-  @apply mt-20 opacity-10;
-}
-.footnotes {
-  @apply text-sm opacity-75;
-}
-.footnote-backref {
-  display: none;
-}
-</style>
+# Arnold's Transformation
+
+<br>
+
+- Periodic chaotic map (an evolution function) that exhibits some sort of chaotic behavior
+- Used to create randomness in the signal when applied to the signal. Here Arnold’s transform is achieved using the following matrix equation:
+
+<br>
+
+
+$$
+\begin{bmatrix}x'\\y' \end{bmatrix}=\left(\begin{bmatrix}1 & 1 \\1 & 2 \end{bmatrix}\begin{bmatrix}x\\y \end{bmatrix}\right)\mod N
+$$
+
+<br>
+
+- Where $(x',y')$ represents the new position of the pixel, whereas the $(x,y)$ the original position
+- Where $N$ indicates size or order of an image matrix
+
+<br>
 
 ---
 
@@ -121,95 +114,18 @@ obtained after 1st iteration, (c) Image obtained after 2nd iteration, (d) Image 
 iteration
 
 ---
-
-# Arnold's Transformation
-
-<br>
-
-- Periodic chaotic map (an evolution function) that exhibits some sort of chaotic behavior
-- Used to create randomness in the signal when applied to the signal. Here Arnold’s transform is achieved using the following matrix equation
-
-<br>
-
-
-$$
-\begin{array}{c}
-
-\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &
-= \frac{4\pi}{c}\vec{\mathbf{j}}    \nabla \cdot \vec{\mathbf{E}} & = 4 \pi \rho \\
-
-\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} & = \vec{\mathbf{0}} \\
-
-\nabla \cdot \vec{\mathbf{B}} & = 0
-
-\end{array}
-$$
-
-<br>
-
-- Where $(x',y')$ represents the new position of the pixel, whereas the $(x,y)$ the original position
-
-<br>
-
+layout: image-right
+image: /assets/propose.png
 ---
-
 # Proposal
 
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
+<br>
+<br>
+<br>
+<br>
+<br>
 
-<div class="grid grid-cols-3 gap-10 pt-4 -mb-6">
-
-```mermaid {scale: 0.5}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {scale: 0.8}
-graph TD
-B[Input Speech Signal] --> C[Decision] --> E[Result 2]
-C --> D[Result 1]
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
-```
-
-</div>
-
-[Learn More](https://sli.dev/guide/syntax.html#diagrams)
-
+**Figure 2:** shows a Diagram of the steps of the proposed algorithm.
 ---
 
 # Scanning-Methodology
@@ -235,7 +151,7 @@ Scans             |  Partitions
 
 <center> 
 
-**Figure 2:** shows how images are being scanned and partitioned.
+**Figure 3:** shows how images are being scanned and partitioned.
 
 </center>
 
@@ -307,12 +223,28 @@ descrambling image of size (64×64 pixels).
 - encryption and decryption use same key
 - verbal signal of length 10 ms is divided into blocks of size(256) values
 - blocks converted into square matrices (16x16) where matrix is defined as connected graph
+- connected graph generates the keys by using the adjecency matrix
+
+---
+
+
+# Example images
+
+<br>
+<br>
+
+<img border="rounded" src="/assets/examples.png">
+
+<center> 
+
+**Figure 4:** shows example images used for computation.
+
+</center>
+
 
 ---
 
 # Example Encryption
-
-<br>
 
 Original             |  Encrypted
 :-------------------------:|:-------------------------:
@@ -320,12 +252,55 @@ Original             |  Encrypted
 
 ---
 
-# Conclusion
+# Computation Results (Original)
 
-<br>
+| | **Diagonal Correlation** | **Vertical Correlation** | **Horizontal Correlation** |
+| --- | ------- | -------- | -------- |
+| Baboon | 0.9437 | 0.9635 | 0.9694 |
+| Lena | 0.9212 | 0.9720 | 0.9460 |
+| Pepper | 0.9478 | 0.9773 | 0.9715 |
+| Mona Liza | 0.9866 | 0.9927 | 0.9932 |
+| Rose | 0.9636 | 0.9868 | 0.9736 |
+| Child | 0.9567 | 0.9741 | 0.9727 |
+| Barbara | 0.9040 | 0.9259 | 0.8829 |
+
 
 ---
 
-# Sources
+# Computation Results (Cipher)
 
-[Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
+| | **Diagonal Correlation** | **Vertical Correlation** | **Horizontal Correlation** |
+| --- | ------- | -------- | -------- |
+| Baboon | 0.0048 | -0.0013 | -0.00033 |
+| Lena | -0.0030 | 0.0006  | 0.0066 | 
+| Pepper | 0.0009 | -0.0046 | -0.0010 |
+| Mona Liza | 0.0065 | -0.0030 | -0.0095 |
+| Rose | -0.0002 | -0.0051 | -0.0039  |
+| Child | 0.0026 | 0.0001 | -0.0030 |
+| Barbara | 0.0021 | 0.0054 | -0.0016 |
+
+---
+
+# Entropy Measures of Proposed Algorithm
+
+<br>
+<br>
+
+| **Color Image** | **Entropy Original Image** | **Entropy Encrypted Image** |
+| --- | ------- | -------- |
+| Baboon | 7.6128 | 7.9988 |
+| Lena | 7.7599 | 7.9987 |
+| Pepper | 7.7749 | 7.9987 |
+| Mona Liza | 7.3808 | 7.9981 |
+
+---
+
+# Paper
+<br>
+<br>
+<br>
+<br>
+<br>
+
+Iman Qays Abduljaleel et al 2021, An Image of Encryption Algorithm Using Graph
+Theory and Speech Signal Key Generation, J. Phys.: Conf. Ser. 1804 012005
